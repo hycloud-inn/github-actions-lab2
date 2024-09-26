@@ -3,7 +3,7 @@ name: Installing Python
 on: [push]
 
 jobs:
-  example_matrix:
+  build:
     strategy:
       matrix:
         os: [ubuntu-latest, macos-12, windows-latest]
@@ -12,5 +12,5 @@ jobs:
     steps:
       - uses: actions/setup-node@v4
         with:
-          python-version: ${{ matrix.version }}
+          python-version: ${{ matrix.py-version }}
         
