@@ -10,7 +10,8 @@ jobs:
         py-version: [3.7, 3.8, 3.9]
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/setup-node@v4
+      - name: Set up Python
+        uses: actions/setup-node@v4
         with:
           python-version: ${{ matrix.py-version }}
         
